@@ -1,6 +1,7 @@
 package org.thz.schoolmanagmentsystem.domain;
 
 import jakarta.persistence.*;
+import org.thz.schoolmanagmentsystem.enums.UserRole;
 
 @Entity
 @Table(name = "users")
@@ -12,6 +13,15 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private UserRole role;
+
+    public UserRole getRoles() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
